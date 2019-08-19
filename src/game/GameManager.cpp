@@ -27,7 +27,8 @@ void GameManager::startGame() {
 
     while (!finishGame) {
         input = getCommand();
-
+        std::cout << "\n";
+        runCommand(input);
         delete input;
     }
 }
@@ -52,9 +53,7 @@ std::vector<std::string>* GameManager::getCommand() {
 
             repeatParsing = false;
 
-        } catch (const TooManyWordsException &e) {
-            std::cout << e.what() << "\n";
-        } catch (const InvalidExamineException &e) {
+        } catch (const LesserException &e) {
             std::cout << e.what() << "\n";
         }
     } while(repeatParsing);
@@ -75,4 +74,14 @@ std::vector<std::string>* GameManager::parseInput() {
     }
 
     return splitInput;
+}
+
+void GameManager::runCommand(std::vector<std::string> *command) {
+    // 1-word commands
+    if (command->size() == 1) {
+        std::cout << "Running a 1-word command.\n";
+    }
+    else if (command->size() == 2) {
+        std::cout << "Running a regular command.\n";
+    }
 }

@@ -20,6 +20,7 @@ private:
 
     std::vector<std::string> *getCommand();
     std::vector<std::string> *parseInput();
+    void runCommand(std::vector<std::string> *command);
 
 public:
     GameManager();
