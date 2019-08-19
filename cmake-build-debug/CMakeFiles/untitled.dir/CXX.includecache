@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp
+Action.h
+/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
+

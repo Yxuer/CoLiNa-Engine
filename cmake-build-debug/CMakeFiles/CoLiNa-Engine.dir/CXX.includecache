@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/Area.h
+Item.h
+/home/usuario/Personal/CoLiNa-Engine/src/game/Item.h
+map
+-
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.cpp
+GameManager.h
+/home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.h
+util/GameExceptions.h
+/home/usuario/Personal/CoLiNa-Engine/src/game/util/GameExceptions.h
+iostream
+-
+sstream
+-
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.h
+Area.h
+/home/usuario/Personal/CoLiNa-Engine/src/game/Area.h
+map
+-
+vector
+-
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/Item.h
+actions/Action.h
+/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
+map
+-
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
+
+/home/usuario/Personal/CoLiNa-Engine/src/game/util/GameExceptions.h
+exception
+-
+

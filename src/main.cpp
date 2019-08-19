@@ -2,6 +2,11 @@
 #include "game/GameManager.h"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+
+    GameManager *game = new GameManager();
+
+    game->loadXML("test.txt");
+    game->startGame();
+
+    delete game;
 }

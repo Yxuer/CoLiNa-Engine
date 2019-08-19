@@ -12,7 +12,7 @@ public:
     Action();
     virtual ~Action();
 
-    virtual void run() = 0;
+    virtual void run();
 };
 
 #endif //UNTITLED_ACTION_H

@@ -12,7 +12,7 @@
 class Area {
 private:
     std::string name;
-    std::map<string, Item> areaItems;
+    std::map<std::string, Item> areaItems;
     std::string description;
 
 public:

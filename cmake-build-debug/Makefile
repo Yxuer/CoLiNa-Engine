@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/luis/CLionProjects/CoLiNa-Engine
+CMAKE_SOURCE_DIR = /home/usuario/Personal/CoLiNa-Engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug
+CMAKE_BINARY_DIR = /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,125 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named untitled
+# Target rules for targets named CoLiNa-Engine
 
 # Build rule for target.
-untitled: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 untitled
-.PHONY : untitled
+CoLiNa-Engine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 CoLiNa-Engine
+.PHONY : CoLiNa-Engine
 
 # fast build rule for target.
-untitled/fast:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
-.PHONY : untitled/fast
+CoLiNa-Engine/fast:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/build
+.PHONY : CoLiNa-Engine/fast
+
+src/game/Area.o: src/game/Area.cpp.o
+
+.PHONY : src/game/Area.o
+
+# target to build an object file
+src/game/Area.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o
+.PHONY : src/game/Area.cpp.o
+
+src/game/Area.i: src/game/Area.cpp.i
+
+.PHONY : src/game/Area.i
+
+# target to preprocess a source file
+src/game/Area.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.i
+.PHONY : src/game/Area.cpp.i
+
+src/game/Area.s: src/game/Area.cpp.s
+
+.PHONY : src/game/Area.s
+
+# target to generate assembly for a file
+src/game/Area.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.s
+.PHONY : src/game/Area.cpp.s
+
+src/game/GameManager.o: src/game/GameManager.cpp.o
+
+.PHONY : src/game/GameManager.o
+
+# target to build an object file
+src/game/GameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o
+.PHONY : src/game/GameManager.cpp.o
+
+src/game/GameManager.i: src/game/GameManager.cpp.i
+
+.PHONY : src/game/GameManager.i
+
+# target to preprocess a source file
+src/game/GameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.i
+.PHONY : src/game/GameManager.cpp.i
+
+src/game/GameManager.s: src/game/GameManager.cpp.s
+
+.PHONY : src/game/GameManager.s
+
+# target to generate assembly for a file
+src/game/GameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.s
+.PHONY : src/game/GameManager.cpp.s
+
+src/game/Item.o: src/game/Item.cpp.o
+
+.PHONY : src/game/Item.o
+
+# target to build an object file
+src/game/Item.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o
+.PHONY : src/game/Item.cpp.o
+
+src/game/Item.i: src/game/Item.cpp.i
+
+.PHONY : src/game/Item.i
+
+# target to preprocess a source file
+src/game/Item.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.i
+.PHONY : src/game/Item.cpp.i
+
+src/game/Item.s: src/game/Item.cpp.s
+
+.PHONY : src/game/Item.s
+
+# target to generate assembly for a file
+src/game/Item.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.s
+.PHONY : src/game/Item.cpp.s
+
+src/game/actions/Action.o: src/game/actions/Action.cpp.o
+
+.PHONY : src/game/actions/Action.o
+
+# target to build an object file
+src/game/actions/Action.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o
+.PHONY : src/game/actions/Action.cpp.o
+
+src/game/actions/Action.i: src/game/actions/Action.cpp.i
+
+.PHONY : src/game/actions/Action.i
+
+# target to preprocess a source file
+src/game/actions/Action.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.i
+.PHONY : src/game/actions/Action.cpp.i
+
+src/game/actions/Action.s: src/game/actions/Action.cpp.s
+
+.PHONY : src/game/actions/Action.s
+
+# target to generate assembly for a file
+src/game/actions/Action.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s
+.PHONY : src/game/actions/Action.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -129,7 +237,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -138,7 +246,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -147,7 +255,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -157,8 +265,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... untitled"
+	@echo "... CoLiNa-Engine"
 	@echo "... edit_cache"
+	@echo "... src/game/Area.o"
+	@echo "... src/game/Area.i"
+	@echo "... src/game/Area.s"
+	@echo "... src/game/GameManager.o"
+	@echo "... src/game/GameManager.i"
+	@echo "... src/game/GameManager.s"
+	@echo "... src/game/Item.o"
+	@echo "... src/game/Item.i"
+	@echo "... src/game/Item.s"
+	@echo "... src/game/actions/Action.o"
+	@echo "... src/game/actions/Action.i"
+	@echo "... src/game/actions/Action.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

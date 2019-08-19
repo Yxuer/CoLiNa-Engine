@@ -8,6 +8,7 @@
 #include "Area.h"
 
 #include <map>
+#include <vector>
 
 class GameManager {
 
@@ -15,6 +16,10 @@ private:
     std::map<std::string, Area> areaList;
     std::map<std::string, unsigned int> playerInventory;
     std::string location;
+    bool finishGame;
+
+    std::vector<std::string> *getCommand();
+    std::vector<std::string> *parseInput();
 
 public:
     GameManager();

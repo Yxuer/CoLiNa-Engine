@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6"/>
 	<Project>
-		<Option title="untitled"/>
+		<Option title="CoLiNa-Engine"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
 		<Option virtualFolders="CMake Files\;"/>
@@ -27,8 +27,8 @@
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="untitled">
-				<Option output="/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
+			<Target title="CoLiNa-Engine">
+				<Option output="/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CoLiNa-Engine" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -44,14 +44,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 CoLiNa-Engine"/>
 					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="untitled/fast">
-				<Option output="/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
+			<Target title="CoLiNa-Engine/fast">
+				<Option output="/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CoLiNa-Engine" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -67,7 +67,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled/fast"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 CoLiNa-Engine/fast"/>
 					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j2 -f &quot;/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -85,31 +85,34 @@
 			</Target>
 		</Build>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/Area.cpp">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/Area.h">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.cpp">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.h">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/Item.h">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/util/GameExceptions.h">
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/main.cpp">
-			<Option target="untitled"/>
+			<Option target="CoLiNa-Engine"/>
 		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

@@ -50,54 +50,54 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/luis/CLionProjects/CoLiNa-Engine
+CMAKE_SOURCE_DIR = /home/usuario/Personal/CoLiNa-Engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug
+CMAKE_BINARY_DIR = /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/untitled.dir
+# Target rules for target CMakeFiles/CoLiNa-Engine.dir
 
 # All Build rule for target.
-CMakeFiles/untitled.dir/all:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/depend
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target untitled"
-.PHONY : CMakeFiles/untitled.dir/all
+CMakeFiles/CoLiNa-Engine.dir/all:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/depend
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target CoLiNa-Engine"
+.PHONY : CMakeFiles/CoLiNa-Engine.dir/all
 
 # Include target in all.
-all: CMakeFiles/untitled.dir/all
+all: CMakeFiles/CoLiNa-Engine.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/untitled.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/untitled.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/untitled.dir/rule
+CMakeFiles/CoLiNa-Engine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles 6
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CoLiNa-Engine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/CoLiNa-Engine.dir/rule
 
 # Convenience name for target.
-untitled: CMakeFiles/untitled.dir/rule
+CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/rule
 
-.PHONY : untitled
-
-# clean rule for target.
-CMakeFiles/untitled.dir/clean:
-	$(MAKE) -f CMakeFiles/untitled.dir/build.make CMakeFiles/untitled.dir/clean
-.PHONY : CMakeFiles/untitled.dir/clean
+.PHONY : CoLiNa-Engine
 
 # clean rule for target.
-clean: CMakeFiles/untitled.dir/clean
+CMakeFiles/CoLiNa-Engine.dir/clean:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/clean
+.PHONY : CMakeFiles/CoLiNa-Engine.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/CoLiNa-Engine.dir/clean
 
 .PHONY : clean
 

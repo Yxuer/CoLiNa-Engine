@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/luis/CLion/clion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/usuario/Descargas/clion-2019.2/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/luis/CLionProjects/CoLiNa-Engine
+CMAKE_SOURCE_DIR = /home/usuario/Personal/CoLiNa-Engine
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug
+CMAKE_BINARY_DIR = /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/untitled.dir/depend.make
@@ -59,28 +59,88 @@ include CMakeFiles/untitled.dir/flags.make
 
 CMakeFiles/untitled.dir/src/main.cpp.o: CMakeFiles/untitled.dir/flags.make
 CMakeFiles/untitled.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/main.cpp.o -c /home/luis/CLionProjects/CoLiNa-Engine/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/untitled.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/main.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/main.cpp
 
 CMakeFiles/untitled.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luis/CLionProjects/CoLiNa-Engine/src/main.cpp > CMakeFiles/untitled.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/main.cpp > CMakeFiles/untitled.dir/src/main.cpp.i
 
 CMakeFiles/untitled.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luis/CLionProjects/CoLiNa-Engine/src/main.cpp -o CMakeFiles/untitled.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/main.cpp -o CMakeFiles/untitled.dir/src/main.cpp.s
+
+CMakeFiles/untitled.dir/src/game/GameManager.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/src/game/GameManager.cpp.o: ../src/game/GameManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/untitled.dir/src/game/GameManager.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/game/GameManager.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.cpp
+
+CMakeFiles/untitled.dir/src/game/GameManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/game/GameManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.cpp > CMakeFiles/untitled.dir/src/game/GameManager.cpp.i
+
+CMakeFiles/untitled.dir/src/game/GameManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/game/GameManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.cpp -o CMakeFiles/untitled.dir/src/game/GameManager.cpp.s
+
+CMakeFiles/untitled.dir/src/game/Area.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/src/game/Area.cpp.o: ../src/game/Area.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/untitled.dir/src/game/Area.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/game/Area.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/Area.cpp
+
+CMakeFiles/untitled.dir/src/game/Area.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/game/Area.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/game/Area.cpp > CMakeFiles/untitled.dir/src/game/Area.cpp.i
+
+CMakeFiles/untitled.dir/src/game/Area.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/game/Area.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/Area.cpp -o CMakeFiles/untitled.dir/src/game/Area.cpp.s
+
+CMakeFiles/untitled.dir/src/game/Item.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/src/game/Item.cpp.o: ../src/game/Item.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/untitled.dir/src/game/Item.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/game/Item.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp
+
+CMakeFiles/untitled.dir/src/game/Item.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/game/Item.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp > CMakeFiles/untitled.dir/src/game/Item.cpp.i
+
+CMakeFiles/untitled.dir/src/game/Item.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/game/Item.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp -o CMakeFiles/untitled.dir/src/game/Item.cpp.s
+
+CMakeFiles/untitled.dir/src/game/actions/Action.cpp.o: CMakeFiles/untitled.dir/flags.make
+CMakeFiles/untitled.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/untitled.dir/src/game/actions/Action.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/untitled.dir/src/game/actions/Action.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp
+
+CMakeFiles/untitled.dir/src/game/actions/Action.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/untitled.dir/src/game/actions/Action.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp > CMakeFiles/untitled.dir/src/game/actions/Action.cpp.i
+
+CMakeFiles/untitled.dir/src/game/actions/Action.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/untitled.dir/src/game/actions/Action.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp -o CMakeFiles/untitled.dir/src/game/actions/Action.cpp.s
 
 # Object files for target untitled
 untitled_OBJECTS = \
-"CMakeFiles/untitled.dir/src/main.cpp.o"
+"CMakeFiles/untitled.dir/src/main.cpp.o" \
+"CMakeFiles/untitled.dir/src/game/GameManager.cpp.o" \
+"CMakeFiles/untitled.dir/src/game/Area.cpp.o" \
+"CMakeFiles/untitled.dir/src/game/Item.cpp.o" \
+"CMakeFiles/untitled.dir/src/game/actions/Action.cpp.o"
 
 # External object files for target untitled
 untitled_EXTERNAL_OBJECTS =
 
 untitled: CMakeFiles/untitled.dir/src/main.cpp.o
+untitled: CMakeFiles/untitled.dir/src/game/GameManager.cpp.o
+untitled: CMakeFiles/untitled.dir/src/game/Area.cpp.o
+untitled: CMakeFiles/untitled.dir/src/game/Item.cpp.o
+untitled: CMakeFiles/untitled.dir/src/game/actions/Action.cpp.o
 untitled: CMakeFiles/untitled.dir/build.make
 untitled: CMakeFiles/untitled.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable untitled"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable untitled"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/untitled.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -93,6 +153,6 @@ CMakeFiles/untitled.dir/clean:
 .PHONY : CMakeFiles/untitled.dir/clean
 
 CMakeFiles/untitled.dir/depend:
-	cd /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/luis/CLionProjects/CoLiNa-Engine /home/luis/CLionProjects/CoLiNa-Engine /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug /home/luis/CLionProjects/CoLiNa-Engine/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuario/Personal/CoLiNa-Engine /home/usuario/Personal/CoLiNa-Engine /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug /home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/untitled.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/untitled.dir/depend
 

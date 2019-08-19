@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o  -o CoLiNa-Engine 
