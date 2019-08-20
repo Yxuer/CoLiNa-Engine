@@ -231,6 +231,87 @@ src/game/actions/Action.cpp.s:
 	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s
 .PHONY : src/game/actions/Action.cpp.s
 
+src/game/actions/EndGame.o: src/game/actions/EndGame.cpp.o
+
+.PHONY : src/game/actions/EndGame.o
+
+# target to build an object file
+src/game/actions/EndGame.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o
+.PHONY : src/game/actions/EndGame.cpp.o
+
+src/game/actions/EndGame.i: src/game/actions/EndGame.cpp.i
+
+.PHONY : src/game/actions/EndGame.i
+
+# target to preprocess a source file
+src/game/actions/EndGame.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.i
+.PHONY : src/game/actions/EndGame.cpp.i
+
+src/game/actions/EndGame.s: src/game/actions/EndGame.cpp.s
+
+.PHONY : src/game/actions/EndGame.s
+
+# target to generate assembly for a file
+src/game/actions/EndGame.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.s
+.PHONY : src/game/actions/EndGame.cpp.s
+
+src/game/actions/Print.o: src/game/actions/Print.cpp.o
+
+.PHONY : src/game/actions/Print.o
+
+# target to build an object file
+src/game/actions/Print.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o
+.PHONY : src/game/actions/Print.cpp.o
+
+src/game/actions/Print.i: src/game/actions/Print.cpp.i
+
+.PHONY : src/game/actions/Print.i
+
+# target to preprocess a source file
+src/game/actions/Print.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.i
+.PHONY : src/game/actions/Print.cpp.i
+
+src/game/actions/Print.s: src/game/actions/Print.cpp.s
+
+.PHONY : src/game/actions/Print.s
+
+# target to generate assembly for a file
+src/game/actions/Print.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.s
+.PHONY : src/game/actions/Print.cpp.s
+
+src/game/actions/SetState.o: src/game/actions/SetState.cpp.o
+
+.PHONY : src/game/actions/SetState.o
+
+# target to build an object file
+src/game/actions/SetState.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o
+.PHONY : src/game/actions/SetState.cpp.o
+
+src/game/actions/SetState.i: src/game/actions/SetState.cpp.i
+
+.PHONY : src/game/actions/SetState.i
+
+# target to preprocess a source file
+src/game/actions/SetState.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.i
+.PHONY : src/game/actions/SetState.cpp.i
+
+src/game/actions/SetState.s: src/game/actions/SetState.cpp.s
+
+.PHONY : src/game/actions/SetState.s
+
+# target to generate assembly for a file
+src/game/actions/SetState.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.s
+.PHONY : src/game/actions/SetState.cpp.s
+
 src/game/util/TinyXML2/tinyxml2.o: src/game/util/TinyXML2/tinyxml2.cpp.o
 
 .PHONY : src/game/util/TinyXML2/tinyxml2.o
@@ -306,6 +387,15 @@ help:
 	@echo "... src/game/actions/Action.o"
 	@echo "... src/game/actions/Action.i"
 	@echo "... src/game/actions/Action.s"
+	@echo "... src/game/actions/EndGame.o"
+	@echo "... src/game/actions/EndGame.i"
+	@echo "... src/game/actions/EndGame.s"
+	@echo "... src/game/actions/Print.o"
+	@echo "... src/game/actions/Print.i"
+	@echo "... src/game/actions/Print.s"
+	@echo "... src/game/actions/SetState.o"
+	@echo "... src/game/actions/SetState.i"
+	@echo "... src/game/actions/SetState.s"
 	@echo "... src/game/util/TinyXML2/tinyxml2.o"
 	@echo "... src/game/util/TinyXML2/tinyxml2.i"
 	@echo "... src/game/util/TinyXML2/tinyxml2.s"

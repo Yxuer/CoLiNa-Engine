@@ -11,6 +11,7 @@
 
 GameManager::GameManager() {
     finishGame = false;
+    listOfActions = {"setState", "print", "endGame"};
 }
 
 GameManager::~GameManager() {

@@ -19,8 +19,15 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o
  /home/usuario/Personal/CoLiNa-Engine/src/game/Item.h
  /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o
+ /home/usuario/Personal/CoLiNa-Engine/src/game/Area.h
+ /home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.h
+ /home/usuario/Personal/CoLiNa-Engine/src/game/Item.h
  /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp
  /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o
+ /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
+ /home/usuario/Personal/CoLiNa-Engine/src/game/actions/SetState.cpp
+ /home/usuario/Personal/CoLiNa-Engine/src/game/actions/SetState.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o
  /home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.cpp
  /home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.h

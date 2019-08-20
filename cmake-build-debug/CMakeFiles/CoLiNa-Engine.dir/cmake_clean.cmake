@@ -5,6 +5,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o"
   "CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o"
   "CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o"
+  "CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o"
+  "CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o"
+  "CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o"
   "CoLiNa-Engine.pdb"
   "CoLiNa-Engine"
 )

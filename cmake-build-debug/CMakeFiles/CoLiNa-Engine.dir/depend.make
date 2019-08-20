@@ -18,8 +18,15 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/Item.cpp
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/Item.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/actions/Action.h
 
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/Area.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/GameManager.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/Item.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.cpp
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.h
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/actions/Action.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/actions/SetState.cpp
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/actions/SetState.h
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o: ../src/game/util/TinyXML2/tinyxml2.cpp
 CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o: ../src/game/util/TinyXML2/tinyxml2.h

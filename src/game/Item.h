@@ -12,7 +12,7 @@
 class Item {
 private:
     std::string name;
-    std::map<std::string, std::map<std::string, Action>> actionsPerState;
+    std::map<std::string, std::map<std::string, Action**>> actionsPerState;
     std::string state;
 
 public:

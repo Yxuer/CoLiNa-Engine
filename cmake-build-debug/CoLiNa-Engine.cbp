@@ -108,6 +108,24 @@
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h">
 			<Option target="CoLiNa-Engine"/>
 		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/EndGame.cpp">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/EndGame.h">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Print.cpp">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Print.h">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/SetState.cpp">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/actions/SetState.h">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/util/GameExceptions.h">
 			<Option target="CoLiNa-Engine"/>
 		</Unit>

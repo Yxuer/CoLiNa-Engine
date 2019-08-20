@@ -3,8 +3,11 @@
 //
 
 #include "Action.h"
+#include "../GameManager.h"
 
-Action::Action() {}
+Action::Action(GameManager *manager) {
+    gameManager = manager;
+}
 
 Action::~Action() {}
 
