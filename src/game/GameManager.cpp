@@ -175,3 +175,16 @@ void GameManager::runCommand(std::vector<std::string> *command) {
         std::cout << "Running a regular command.\n";
     }
 }
+
+void GameManager::endGame() {
+    finishGame = true;
+}
+
+void GameManager::print(const std::string &text) {
+    printf("%s", text.c_str());
+}
+
+void GameManager::setState(const std::string &item, const std::string &state) {
+    // TODO Complete
+    areaList["location"]->getItem(item);
+}

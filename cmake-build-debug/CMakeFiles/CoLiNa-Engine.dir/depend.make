@@ -24,6 +24,23 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/Item.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.cpp
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.h
 
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o: ../src/game/Area.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o: ../src/game/GameManager.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o: ../src/game/Item.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o: ../src/game/actions/Action.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o: ../src/game/actions/EndGame.cpp
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o: ../src/game/actions/EndGame.h
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o: ../src/game/Area.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o: ../src/game/GameManager.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o: ../src/game/Item.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o: ../src/game/actions/Action.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o: ../src/game/actions/Print.cpp
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o: ../src/game/actions/Print.h
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/Area.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/GameManager.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/Item.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/actions/Action.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/actions/SetState.cpp
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o: ../src/game/actions/SetState.h

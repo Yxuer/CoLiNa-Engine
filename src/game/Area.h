@@ -21,7 +21,7 @@ public:
 
     void examine();
 
-    Item getItem();
+    Item* getItem(const std::string& itemName);
 };
 
 #endif //UNTITLED_AREA_H

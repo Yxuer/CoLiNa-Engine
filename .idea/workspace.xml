@@ -12,32 +12,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d552ab6-11ea-49e0-bc7e-ddcae52c7ecb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CoLiNa-Engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CoLiNa-Engine" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CoLiNa-Engine.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CoLiNa-Engine.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Area.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Area.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Area.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Area.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/GameManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameManager.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/GameManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Item.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Item.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/actions/Action.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/actions/Action.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/actions/Action.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/actions/Action.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +91,7 @@
       <workItem from="1566209680339" duration="307000" />
       <workItem from="1566209990988" duration="566000" />
       <workItem from="1566210597102" duration="186000" />
-      <workItem from="1566210966123" duration="18000000" />
+      <workItem from="1566210966123" duration="18558000" />
     </task>
     <servers />
   </component>

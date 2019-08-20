@@ -7,3 +7,7 @@
 Area::Area() {}
 
 Area::~Area() {}
+
+Item* Area::getItem(const std::string& itemName) {
+    return areaItems[itemName];
+}
