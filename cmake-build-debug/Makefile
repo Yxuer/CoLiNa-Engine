@@ -231,6 +231,33 @@ src/game/actions/Action.cpp.s:
 	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s
 .PHONY : src/game/actions/Action.cpp.s
 
+src/game/util/TinyXML2/tinyxml2.o: src/game/util/TinyXML2/tinyxml2.cpp.o
+
+.PHONY : src/game/util/TinyXML2/tinyxml2.o
+
+# target to build an object file
+src/game/util/TinyXML2/tinyxml2.cpp.o:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o
+.PHONY : src/game/util/TinyXML2/tinyxml2.cpp.o
+
+src/game/util/TinyXML2/tinyxml2.i: src/game/util/TinyXML2/tinyxml2.cpp.i
+
+.PHONY : src/game/util/TinyXML2/tinyxml2.i
+
+# target to preprocess a source file
+src/game/util/TinyXML2/tinyxml2.cpp.i:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.i
+.PHONY : src/game/util/TinyXML2/tinyxml2.cpp.i
+
+src/game/util/TinyXML2/tinyxml2.s: src/game/util/TinyXML2/tinyxml2.cpp.s
+
+.PHONY : src/game/util/TinyXML2/tinyxml2.s
+
+# target to generate assembly for a file
+src/game/util/TinyXML2/tinyxml2.cpp.s:
+	$(MAKE) -f CMakeFiles/CoLiNa-Engine.dir/build.make CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.s
+.PHONY : src/game/util/TinyXML2/tinyxml2.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -279,6 +306,9 @@ help:
 	@echo "... src/game/actions/Action.o"
 	@echo "... src/game/actions/Action.i"
 	@echo "... src/game/actions/Action.s"
+	@echo "... src/game/util/TinyXML2/tinyxml2.o"
+	@echo "... src/game/util/TinyXML2/tinyxml2.i"
+	@echo "... src/game/util/TinyXML2/tinyxml2.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

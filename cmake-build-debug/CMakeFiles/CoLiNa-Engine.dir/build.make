@@ -70,9 +70,35 @@ CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/main.cpp -o CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.s
 
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: CMakeFiles/CoLiNa-Engine.dir/flags.make
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp > CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.i
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp -o CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o: CMakeFiles/CoLiNa-Engine.dir/flags.make
+CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o: ../src/game/util/TinyXML2/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.cpp
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.cpp > CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.i
+
+CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.cpp -o CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.s
+
 CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o: CMakeFiles/CoLiNa-Engine.dir/flags.make
 CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o: ../src/game/GameManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.cpp
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.i: cmake_force
@@ -85,7 +111,7 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.s: cmake_force
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o: CMakeFiles/CoLiNa-Engine.dir/flags.make
 CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o: ../src/game/Area.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/Area.cpp
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.i: cmake_force
@@ -98,7 +124,7 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.s: cmake_force
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: CMakeFiles/CoLiNa-Engine.dir/flags.make
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/Item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.i: cmake_force
@@ -109,38 +135,27 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp -o CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.s
 
-CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: CMakeFiles/CoLiNa-Engine.dir/flags.make
-CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o -c /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp
-
-CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp > CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.i
-
-CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp -o CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.s
-
 # Object files for target CoLiNa-Engine
 CoLiNa__Engine_OBJECTS = \
 "CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o" \
+"CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o" \
+"CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o" \
 "CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o" \
 "CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o" \
-"CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o" \
-"CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o"
+"CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o"
 
 # External object files for target CoLiNa-Engine
 CoLiNa__Engine_EXTERNAL_OBJECTS =
 
 CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o
+CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o
+CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o
 CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o
 CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o
 CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o
-CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o
 CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/build.make
 CoLiNa-Engine: CMakeFiles/CoLiNa-Engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable CoLiNa-Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable CoLiNa-Engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CoLiNa-Engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

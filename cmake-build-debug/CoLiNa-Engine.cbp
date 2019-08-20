@@ -111,6 +111,12 @@
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/util/GameExceptions.h">
 			<Option target="CoLiNa-Engine"/>
 		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.cpp">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
+		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.h">
+			<Option target="CoLiNa-Engine"/>
+		</Unit>
 		<Unit filename="/home/usuario/Personal/CoLiNa-Engine/src/main.cpp">
 			<Option target="CoLiNa-Engine"/>
 		</Unit>

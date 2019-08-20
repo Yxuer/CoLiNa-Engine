@@ -6,9 +6,8 @@ int main() {
 
     GameManager *game = new GameManager();
 
-    game->loadXML("test.txt");
-
     try {
+        game->loadXML("test.xml");
         game->startGame();
     } catch (FatalException &e) {
         std::cout << e.what();

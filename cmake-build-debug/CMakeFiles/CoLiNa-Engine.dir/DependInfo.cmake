@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.cpp" "/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o"
   "/home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp" "/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o"
   "/home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.cpp" "/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o"
+  "/home/usuario/Personal/CoLiNa-Engine/src/game/util/TinyXML2/tinyxml2.cpp" "/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o"
   "/home/usuario/Personal/CoLiNa-Engine/src/main.cpp" "/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
