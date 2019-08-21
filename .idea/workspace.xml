@@ -12,18 +12,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d552ab6-11ea-49e0-bc7e-ddcae52c7ecb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Area.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Print.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/actions/SetState.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/game/util/TinyXML2/tinyxml2.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir/src/main.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CoLiNa-Engine" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CoLiNa-Engine" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Area.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Area.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Area.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Area.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/GameManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/GameManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/GameManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Item.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Item.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Item.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Item.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/actions/EndGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/actions/EndGame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/actions/Print.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/actions/Print.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/actions/Print.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/actions/Print.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/actions/SetState.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/actions/SetState.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/actions/SetState.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/actions/SetState.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/util/GameExceptions.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/util/GameExceptions.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/util/TinyXML2/tinyxml2.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/util/TinyXML2/tinyxml2.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +54,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="64" />
     <option name="y" value="-11" />
@@ -91,7 +108,7 @@
       <workItem from="1566209680339" duration="307000" />
       <workItem from="1566209990988" duration="566000" />
       <workItem from="1566210597102" duration="186000" />
-      <workItem from="1566210966123" duration="18558000" />
+      <workItem from="1566210966123" duration="25633000" />
     </task>
     <servers />
   </component>
@@ -114,8 +131,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/game/GameManager.cpp</url>
-          <line>45</line>
-          <option name="timeStamp" value="14" />
+          <line>74</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/game/GameManager.cpp</url>
+          <line>60</line>
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

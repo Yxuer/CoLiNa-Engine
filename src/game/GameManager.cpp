@@ -4,10 +4,13 @@
 
 #include "GameManager.h"
 #include "util/GameExceptions.h"
-#include "util/TinyXML2/tinyxml2.h"
 
 #include <iostream>
 #include <sstream>
+
+#ifndef XMLCheckResult
+    #define XMLCheckResult(a_eResult) if (a_eResult != tinyxml2::XML_SUCCESS) { throw XMLQueryError(); }
+#endif
 
 GameManager::GameManager() {
     finishGame = false;
@@ -49,66 +52,116 @@ void GameManager::loadXML(const std::string &filename) {
         }
         std::cout << "Reading area\n";
 
-        tinyxml2::XMLNode *itemReader = areaReader->FirstChild();
-        if (itemReader == nullptr) {
-            throw InvalidItemError();
-        }
+        Area *areaBeingBuilt;
+        const char * areaName, *areaDescription;
+        bool startingArea;
+        std::map<std::string, Item*>* itemList;
+        auto areaAttrsReader = dynamic_cast<tinyxml2::XMLElement*>(areaReader);
 
-        // Item reading loop
-        while (itemReader != nullptr) {
-            if (std::string(itemReader->Value()) != "Item") {
-                throw InvalidItemError();
-            }
-            std::cout << "  Reading item\n";
+        eResult = areaAttrsReader->QueryStringAttribute("name", &areaName);
+        XMLCheckResult(eResult);
 
-            tinyxml2::XMLNode *stateReader = itemReader->FirstChild();
-            if (stateReader == nullptr) {
-                throw InvalidStateError();
-            }
+        eResult = areaAttrsReader->QueryStringAttribute("text", &areaDescription);
+        XMLCheckResult(eResult);
 
-            // State reading loop
-            while (stateReader != nullptr) {
-                if (std::string(stateReader->Value()) != "State") {
-                    throw InvalidStateError();
-                }
-                std::cout << "      Reading state\n";
+        eResult = areaAttrsReader->QueryBoolAttribute("startingZone", &startingArea);
+        XMLCheckResult(eResult);
 
-                tinyxml2::XMLNode *commandReader = stateReader->FirstChild();
-                if (commandReader == nullptr) {
-                    throw InvalidCommandError();
-                }
-                // Command reading loop
-                while (commandReader != nullptr) {
-                    if (std::string(commandReader->Value()) != "Command") {
-                        throw InvalidCommandError();
-                    }
-                    std::cout << "          Reading command\n";
+        itemList = readAreaItems(areaReader);
 
-                    tinyxml2::XMLNode *actionReader = commandReader->FirstChild();
-                    if (actionReader == nullptr) {
-                        throw InvalidActionError();
-                    }
-                    // Action reading loop
-                    while (actionReader != nullptr) {
-                        if (std::string(actionReader->Value()) != "Action") {
-                            throw InvalidActionError();
-                        }
-                        std::cout << "              Reading action\n";
-
-                        actionReader = actionReader->NextSibling();
-                    }
-
-                    commandReader = commandReader->NextSibling();
-                }
-
-                stateReader = stateReader->NextSibling();
-            }
-
-            itemReader = itemReader->NextSibling();
-        }
+        areaBeingBuilt = new Area(itemList, areaName, areaDescription, startingArea);
+        areaList.insert(std::make_pair(std::string(areaName), areaBeingBuilt));
 
         areaReader = areaReader->NextSibling();
     }
+}
+
+std::map<std::string, Item*>* GameManager::readAreaItems(tinyxml2::XMLNode *areaRef) {
+
+    auto itemList = new std::map<std::string, Item*>();
+    tinyxml2::XMLError eResult;
+
+    tinyxml2::XMLNode *itemReader = areaRef->FirstChild();
+    if (itemReader == nullptr) {
+        throw InvalidItemError();
+    }
+
+    // Item reading loop
+    while (itemReader != nullptr) {
+        if (std::string(itemReader->Value()) != "Item") {
+            throw InvalidItemError();
+        }
+        std::cout << "  Reading item\n";
+
+        Item* itemBeingBuilt;
+        const char *name, *state;
+        std::map<std::string, std::map<std::string, Action**>>* actionsPerState;
+        auto itemAttrsReader = dynamic_cast<tinyxml2::XMLElement*>(itemReader);
+
+        eResult = itemAttrsReader->QueryStringAttribute("name", &name);
+        XMLCheckResult(eResult);
+
+        eResult = itemAttrsReader->QueryStringAttribute("state", &state);
+        XMLCheckResult(eResult);
+
+        actionsPerState = readItemStates(itemReader);
+
+        itemBeingBuilt = new Item(actionsPerState, name, state);
+        itemList->insert(std::make_pair(name, itemBeingBuilt));
+
+        itemReader = itemReader->NextSibling();
+    }
+
+    return itemList;
+}
+
+std::map<std::string, std::map<std::string, Action**>>* GameManager::readItemStates(tinyxml2::XMLNode *itemRef) {
+    auto stateList = new std::map<std::string, std::map<std::string, Action**>>();
+
+    tinyxml2::XMLNode *stateReader = itemRef->FirstChild();
+    if (stateReader == nullptr) {
+        throw InvalidStateError();
+    }
+
+    // State reading loop
+    while (stateReader != nullptr) {
+        if (std::string(stateReader->Value()) != "State") {
+            throw InvalidStateError();
+        }
+        std::cout << "      Reading state\n";
+
+        tinyxml2::XMLNode *commandReader = stateReader->FirstChild();
+        if (commandReader == nullptr) {
+            throw InvalidCommandError();
+        }
+        // Command reading loop
+        while (commandReader != nullptr) {
+            if (std::string(commandReader->Value()) != "Command") {
+                throw InvalidCommandError();
+            }
+            std::cout << "          Reading command\n";
+
+            tinyxml2::XMLNode *actionReader = commandReader->FirstChild();
+            if (actionReader == nullptr) {
+                throw InvalidActionError();
+            }
+            // Action reading loop
+            while (actionReader != nullptr) {
+                if (std::string(actionReader->Value()) != "Action") {
+                    throw InvalidActionError();
+                }
+                std::cout << "              Reading action\n";
+
+                actionReader = actionReader->NextSibling();
+            }
+
+            commandReader = commandReader->NextSibling();
+        }
+
+        stateReader = stateReader->NextSibling();
+    }
+
+    return stateList;
 }
 
 void GameManager::startGame() {
@@ -176,15 +229,14 @@ void GameManager::runCommand(std::vector<std::string> *command) {
     }
 }
 
-void GameManager::endGame() {
-    finishGame = true;
+void GameManager::setEndGame(bool end) {
+    finishGame = end;
 }
 
-void GameManager::print(const std::string &text) {
-    printf("%s", text.c_str());
+Area* GameManager::getArea(std::string name) {
+    return areaList[name];
 }
 
-void GameManager::setState(const std::string &item, const std::string &state) {
-    // TODO Complete
-    areaList["location"]->getItem(item);
+const std::string& GameManager::getCurrentLocation() {
+    return location;
 }

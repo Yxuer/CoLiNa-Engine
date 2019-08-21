@@ -6,10 +6,10 @@
 
 #include "../GameManager.h"
 
-Print::Print(GameManager *mgr, std::string text) : Action(mgr){
-    parameters["text"] = text;
+Print::Print(GameManager *mgr) : Action(mgr){
+    listOfParameterNames.emplace_back("text");
 }
 
 void Print::run() {
-    gameManager->print(parameters["text"]);
+    printf("%s", parameters["text"].c_str());
 }

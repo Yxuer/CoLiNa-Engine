@@ -79,6 +79,12 @@ class InvalidActionError : public FatalException {
         }
 };
 
+class XMLQueryError : public FatalException {
+    public:
+        virtual const char* what() const throw() {
+            return "Error: an attribute in the XML has been badly specified";
+        }
+};
 
 #endif //COLINA_ENGINE_GAMEEXCEPTIONS_H
 

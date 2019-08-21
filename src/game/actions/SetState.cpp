@@ -5,11 +5,13 @@
 #include "SetState.h"
 #include "../GameManager.h"
 
-SetState::SetState(GameManager *mgr, std::string item, std::string state) : Action(mgr){
-    parameters["item"] = item;
-    parameters["state"] = state;
+SetState::SetState(GameManager *mgr) : Action(mgr){
+    listOfParameterNames.emplace_back("item");
+    listOfParameterNames.emplace_back("state");
 }
 
 void SetState::run() {
-    gameManager->setState(parameters["item"], parameters["state"]);
+    gameManager->getArea(gameManager->getCurrentLocation())
+               ->getItem(parameters["item"])
+               ->setState(parameters["state"]);
 }

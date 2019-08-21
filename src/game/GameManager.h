@@ -6,6 +6,7 @@
 #define UNTITLED_GAMEMANAGER_H
 
 #include "Area.h"
+#include "util/TinyXML2/tinyxml2.h"
 
 #include <map>
 #include <vector>
@@ -25,6 +26,9 @@ private:
     std::vector<std::string> *parseInput();
     void runCommand(std::vector<std::string> *command);
 
+    std::map<std::string, Item*>* readAreaItems(tinyxml2::XMLNode* areaRef);
+    std::map<std::string, std::map<std::string, Action**>>* readItemStates(tinyxml2::XMLNode* itemRef);
+
 public:
     GameManager();
     ~GameManager();
@@ -35,9 +39,11 @@ public:
     void addToInventory(const std::string& itemToAdd);
     void removeFromInventory(const std::string& itemToDelete);
     bool checkInventory(const std::string& itemToCheck);
-    void setState(const std::string& item, const std::string& state);
-    void print(const std::string& text);
-    void endGame();
+
+    Area* getArea(std::string name);
+    void setEndGame(bool end);
+
+    const std::string& getCurrentLocation();
 };
 
 #endif //UNTITLED_GAMEMANAGER_H

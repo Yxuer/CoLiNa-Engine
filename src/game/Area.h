@@ -12,11 +12,12 @@
 class Area {
 private:
     std::string name;
-    std::map<std::string, Item*> areaItems;
+    std::map<std::string, Item*>* areaItems;
     std::string description;
+    bool isStarting;
 
 public:
-    Area();
+    Area(std::map<std::string, Item*>* items, std::string n, std::string d, bool start);
     virtual ~Area();
 
     void examine();

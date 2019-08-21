@@ -1,6 +1,6 @@
 <Game>
-  <Area>
-    <Item>
+  <Area name="area1" text="Sample text" startingZone="true">
+    <Item name="item1" state="state1">
       <State>
         <Command>
           <Action/>
@@ -18,7 +18,7 @@
         </Command>
       </State>
     </Item>
-    <Item>
+    <Item name="item2" state="state2">
       <State>
         <Command>
           <Action/>

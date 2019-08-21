@@ -12,14 +12,17 @@
 class Item {
 private:
     std::string name;
-    std::map<std::string, std::map<std::string, Action**>> actionsPerState;
+    std::map<std::string, std::map<std::string, Action**>>* actionsPerState;
     std::string state;
 
 public:
-    Item();
+    Item(std::map<std::string, std::map<std::string, Action**>>* actsPState, std::string n, std::string st);
     virtual ~Item();
 
     void act(const std::string& action);
+
+    const std::string& getState() const;
+    void setState(const std::string& stateName);
 };
 
 #endif //UNTITLED_ITEM_H

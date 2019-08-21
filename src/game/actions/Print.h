@@ -11,7 +11,7 @@
 
 class Print : public Action {
     public:
-        Print(GameManager *mgr, std::string text);
+        Print(GameManager *mgr);
         virtual void run() override ;
 };
 

@@ -11,7 +11,7 @@
 
 class SetState : public Action {
     public:
-        SetState(GameManager *mgr, std::string item, std::string state);
+        SetState(GameManager *mgr);
         virtual void run() override ;
 };
 

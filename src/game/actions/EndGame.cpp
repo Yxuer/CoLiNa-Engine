@@ -9,5 +9,5 @@
 EndGame::EndGame(GameManager *mgr) : Action(mgr) {}
 
 void EndGame::run() {
-    gameManager->endGame();
+    gameManager->setEndGame(true);
 }
