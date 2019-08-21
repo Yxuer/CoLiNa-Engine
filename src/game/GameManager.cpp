@@ -27,6 +27,7 @@ GameManager* GameManager::getInstance() {
 
 GameManager::GameManager() {
     finishGame = false;
+    location = "";
 }
 
 void GameManager::erase() {
@@ -80,6 +81,13 @@ void GameManager::loadXML(const std::string &filename) {
 
         eResult = areaAttrsReader->QueryBoolAttribute("startingZone", &startingArea);
         XMLCheckResult(eResult);
+
+        if (startingArea) {
+            if (!location.empty()) {
+                throw MultipleStartingAreasError();
+            }
+            location = areaName;
+        }
 
         itemList = readAreaItems(areaReader);
 
@@ -211,7 +219,7 @@ std::vector<Action*>* GameManager::readCommandActions(tinyxml2::XMLNode *command
 
         // Instantiate specific action given (if it exists)
         if (Action::listOfActions.find(actionName) == Action::listOfActions.end()) {
-            throw UnknownActionError();
+            throw XMLUnknownActionError();
         }
 
         actionBeingBuilt = Action::make_action(actionName);
@@ -291,8 +299,24 @@ void GameManager::runCommand(std::vector<std::string> *command) {
     if (command->size() == 1) {
         std::cout << "Running a 1-word command.\n";
     }
+
     else if (command->size() == 2) {
-        std::cout << "Running a regular command.\n";
+        try {
+            auto currentArea = areaList.find(location);
+
+            if (currentArea == areaList.end()) {
+                throw UnknownLocationError();
+            }
+
+            auto areaItem = currentArea->second->getItem(command->at(1));
+            if (areaItem == nullptr) {
+                throw UnknownItemException();
+            }
+
+            areaItem->act(command->at(0));
+        } catch (const LesserException& e) {
+            std::cout << e.what();
+        }
     }
 }
 

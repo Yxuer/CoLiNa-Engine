@@ -3,6 +3,9 @@
 //
 
 #include "Item.h"
+#include "util/GameExceptions.h"
+
+#include <iostream>
 
 Item::Item(std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* actsPState, std::string n, std::string st)
 : name(n), state(st){
@@ -28,4 +31,20 @@ const std::string& Item::getState() const {
 
 void Item::setState(const std::string &stateName) {
     state = stateName;
+}
+
+void Item::act(const std::string &action) {
+    auto stateCommands = actionsPerState->find(state);
+    if (stateCommands == actionsPerState->end()) {
+        throw UnknownStateError();
+    }
+
+    auto actionList = stateCommands->second->find(action);
+    if (actionList == stateCommands->second->end()) {
+        throw UnknownActionException();
+    }
+
+    for (auto runAction : *actionList->second) {
+        runAction->run();
+    }
 }

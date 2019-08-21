@@ -17,6 +17,7 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/GameManager.cpp.o: ../src/game/util/TinyXM
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/Item.cpp
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/Item.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/actions/Action.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o: ../src/game/util/GameExceptions.h
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/Area.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/GameManager.h

@@ -23,6 +23,20 @@ class InvalidExamineException : public LesserException {
        }
 };
 
+class UnknownItemException : public LesserException {
+    public:
+        virtual const char* what() const throw() {
+            return "There is no such item in this area";
+        }
+};
+
+class UnknownActionException : public LesserException {
+    public:
+        virtual const char* what() const throw() {
+            return "I cannot do this on this item";
+        }
+};
+
 class FatalException : public std::exception {};
 
 class FileLoadError : public FatalException {
@@ -86,10 +100,31 @@ class XMLQueryError : public FatalException {
         }
 };
 
-class UnknownActionError : public FatalException {
+class XMLUnknownActionError : public FatalException {
     public:
         virtual const char* what() const throw() {
             return "Error: unknown action specified in XML";
+        }
+};
+
+class UnknownLocationError : public FatalException {
+    public:
+        virtual const char* what() const throw() {
+            return "Error: the player has been moved to an unspecified location";
+        }
+};
+
+class UnknownStateError : public FatalException {
+    public:
+        virtual const char* what() const throw() {
+            return "Error: the item has been set to an unspecified state";
+        }
+};
+
+class MultipleStartingAreasError : public FatalException {
+    public:
+        virtual const char* what() const throw() {
+            return "Error: multiple starting areas defined";
         }
 };
 

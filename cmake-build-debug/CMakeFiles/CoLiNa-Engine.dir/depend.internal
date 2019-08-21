@@ -18,6 +18,7 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/Item.cpp.o
  /home/usuario/Personal/CoLiNa-Engine/src/game/Item.cpp
  /home/usuario/Personal/CoLiNa-Engine/src/game/Item.h
  /home/usuario/Personal/CoLiNa-Engine/src/game/actions/Action.h
+ /home/usuario/Personal/CoLiNa-Engine/src/game/util/GameExceptions.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o
  /home/usuario/Personal/CoLiNa-Engine/src/game/Area.h
  /home/usuario/Personal/CoLiNa-Engine/src/game/GameManager.h
