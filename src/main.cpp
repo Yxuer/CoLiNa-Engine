@@ -4,7 +4,7 @@
 
 int main() {
 
-    GameManager *game = new GameManager();
+    GameManager *game = GameManager::getInstance();
 
     try {
         game->loadXML("test.xml");
@@ -13,5 +13,5 @@ int main() {
         std::cout << e.what();
     }
 
-    delete game;
+    game->erase();
 }

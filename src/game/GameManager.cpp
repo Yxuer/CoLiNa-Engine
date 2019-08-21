@@ -13,11 +13,23 @@
     #define XMLCheckResult(a_eResult) if (a_eResult != tinyxml2::XML_SUCCESS) { throw XMLQueryError(); }
 #endif
 
+GameManager* GameManager::instance = 0;
+
+GameManager* GameManager::getInstance() {
+
+    if (instance == 0) {
+        instance = new GameManager();
+        Action::gameManager = instance;
+    }
+
+    return instance;
+}
+
 GameManager::GameManager() {
     finishGame = false;
 }
 
-GameManager::~GameManager() {
+void GameManager::erase() {
     for (auto area : areaList) {
         delete area.second;
     }
@@ -26,8 +38,6 @@ GameManager::~GameManager() {
 void GameManager::loadXML(const std::string &filename) {
 
     std::cout << "Loading game file " << filename << "\n";
-
-    Action::gameManager = this;
 
     // Load XML game file
     tinyxml2::XMLDocument xmlDoc;

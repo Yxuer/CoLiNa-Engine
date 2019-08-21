@@ -20,6 +20,10 @@ private:
     std::string location;
     bool finishGame;
 
+    // Singleton implementation
+    static GameManager *instance;
+    GameManager();
+
     std::vector<std::string> *getCommand();
     std::vector<std::string> *parseInput();
     void runCommand(std::vector<std::string> *command);
@@ -29,8 +33,10 @@ private:
     std::vector<Action*>* readCommandActions(tinyxml2::XMLNode* commandRef);
 
 public:
-    GameManager();
-    ~GameManager();
+    // Singleton implementation
+    static GameManager* getInstance();
+
+    void erase();
 
     void loadXML(const std::string& filename);
     void startGame();
