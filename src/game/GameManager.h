@@ -20,14 +20,12 @@ private:
     std::string location;
     bool finishGame;
 
-    std::set<std::string> listOfActions;
-
     std::vector<std::string> *getCommand();
     std::vector<std::string> *parseInput();
     void runCommand(std::vector<std::string> *command);
 
     std::map<std::string, Item*>* readAreaItems(tinyxml2::XMLNode* areaRef);
-    std::map<std::string, std::map<std::string, Action**>>* readItemStates(tinyxml2::XMLNode* itemRef);
+    std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* readItemStates(tinyxml2::XMLNode* itemRef);
     std::vector<Action*>* readCommandActions(tinyxml2::XMLNode* commandRef);
 
 public:

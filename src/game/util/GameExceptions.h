@@ -86,5 +86,12 @@ class XMLQueryError : public FatalException {
         }
 };
 
+class UnknownActionError : public FatalException {
+    public:
+        virtual const char* what() const throw() {
+            return "Error: unknown action specified in XML";
+        }
+};
+
 #endif //COLINA_ENGINE_GAMEEXCEPTIONS_H
 

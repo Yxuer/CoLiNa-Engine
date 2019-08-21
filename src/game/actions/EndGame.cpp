@@ -6,7 +6,7 @@
 
 #include "../GameManager.h"
 
-EndGame::EndGame(GameManager *mgr) : Action(mgr) {}
+EndGame::EndGame() : Action() {}
 
 void EndGame::run() {
     gameManager->setEndGame(true);

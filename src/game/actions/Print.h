@@ -11,7 +11,7 @@
 
 class Print : public Action {
     public:
-        Print(GameManager *mgr);
+        Print();
         virtual void run() override ;
 };
 

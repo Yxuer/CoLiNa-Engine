@@ -6,7 +6,7 @@
 
 #include "../GameManager.h"
 
-Print::Print(GameManager *mgr) : Action(mgr){
+Print::Print() : Action(){
     listOfParameterNames.emplace_back("text");
 }
 

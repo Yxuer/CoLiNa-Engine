@@ -4,6 +4,7 @@
 
 #include "GameManager.h"
 #include "util/GameExceptions.h"
+#include "actions/Action.h"
 
 #include <iostream>
 #include <sstream>
@@ -14,16 +15,19 @@
 
 GameManager::GameManager() {
     finishGame = false;
-    listOfActions = {"setState", "print", "endGame"};
 }
 
 GameManager::~GameManager() {
-
+    for (auto area : areaList) {
+        delete area.second;
+    }
 }
 
 void GameManager::loadXML(const std::string &filename) {
 
     std::cout << "Loading game file " << filename << "\n";
+
+    Action::gameManager = this;
 
     // Load XML game file
     tinyxml2::XMLDocument xmlDoc;
@@ -95,7 +99,7 @@ std::map<std::string, Item*>* GameManager::readAreaItems(tinyxml2::XMLNode *area
 
         Item* itemBeingBuilt;
         const char *name, *state;
-        std::map<std::string, std::map<std::string, Action**>>* actionsPerState;
+        std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* actionsPerState;
         auto itemAttrsReader = dynamic_cast<tinyxml2::XMLElement*>(itemReader);
 
         eResult = itemAttrsReader->QueryStringAttribute("name", &name);
@@ -115,9 +119,11 @@ std::map<std::string, Item*>* GameManager::readAreaItems(tinyxml2::XMLNode *area
     return itemList;
 }
 
-std::map<std::string, std::map<std::string, Action**>>* GameManager::readItemStates(tinyxml2::XMLNode *itemRef) {
+std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* GameManager::readItemStates(tinyxml2::XMLNode *itemRef) {
 
-    auto stateList = new std::map<std::string, std::map<std::string, Action**>>();
+    auto stateList = new std::map<std::string, std::map<std::string, std::vector<Action*>*>*>();
+    std::map<std::string, std::vector<Action*>*> *commandActions;
+    tinyxml2::XMLError eResult;
 
     tinyxml2::XMLNode *stateReader = itemRef->FirstChild();
     if (stateReader == nullptr) {
@@ -131,6 +137,13 @@ std::map<std::string, std::map<std::string, Action**>>* GameManager::readItemSta
         }
         std::cout << "      Reading state\n";
 
+        const char * stateName;
+        auto stateAttrsReader = dynamic_cast<tinyxml2::XMLElement*>(stateReader);
+
+        eResult = stateAttrsReader->QueryStringAttribute("name", &stateName);
+        XMLCheckResult(eResult);
+
+        commandActions = new std::map<std::string, std::vector<Action*>*>();
         tinyxml2::XMLNode *commandReader = stateReader->FirstChild();
         if (commandReader == nullptr) {
             throw InvalidCommandError();
@@ -142,22 +155,21 @@ std::map<std::string, std::map<std::string, Action**>>* GameManager::readItemSta
             }
             std::cout << "          Reading command\n";
 
-            tinyxml2::XMLNode *actionReader = commandReader->FirstChild();
-            if (actionReader == nullptr) {
-                throw InvalidActionError();
-            }
-            // Action reading loop
-            while (actionReader != nullptr) {
-                if (std::string(actionReader->Value()) != "Action") {
-                    throw InvalidActionError();
-                }
-                std::cout << "              Reading action\n";
+            const char * commandName;
+            std::vector<Action*>* actionListPerState;
+            auto commandAttrsReader = dynamic_cast<tinyxml2::XMLElement*>(commandReader);
 
-                actionReader = actionReader->NextSibling();
-            }
+            eResult = commandAttrsReader->QueryStringAttribute("name", &commandName);
+            XMLCheckResult(eResult);
+
+            actionListPerState = readCommandActions(commandReader);
+
+            commandActions->insert(std::make_pair(commandName, actionListPerState));
 
             commandReader = commandReader->NextSibling();
         }
+
+        stateList->insert(std::make_pair(stateName, commandActions));
 
         stateReader = stateReader->NextSibling();
     }
@@ -167,6 +179,44 @@ std::map<std::string, std::map<std::string, Action**>>* GameManager::readItemSta
 
 std::vector<Action*>* GameManager::readCommandActions(tinyxml2::XMLNode *commandRef) {
     auto actionList = new std::vector<Action*>();
+
+    tinyxml2::XMLNode *actionReader = commandRef->FirstChild();
+    tinyxml2::XMLError eResult;
+    if (actionReader == nullptr) {
+        throw InvalidActionError();
+    }
+    // Action reading loop
+    while (actionReader != nullptr) {
+        if (std::string(actionReader->Value()) != "Action") {
+            throw InvalidActionError();
+        }
+        std::cout << "              Reading action\n";
+
+        Action* actionBeingBuilt;
+        const char * actionName, *paramRead;
+        auto actionAttrsReader = dynamic_cast<tinyxml2::XMLElement*>(actionReader);
+
+        eResult = actionAttrsReader->QueryStringAttribute("name", &actionName);
+        XMLCheckResult(eResult);
+
+        // Instantiate specific action given (if it exists)
+        if (Action::listOfActions.find(actionName) == Action::listOfActions.end()) {
+            throw UnknownActionError();
+        }
+
+        actionBeingBuilt = Action::make_action(actionName);
+        std::vector<std::string> paramList = actionBeingBuilt->getListOfParameterNames();
+
+        for (auto str : paramList) {
+            eResult = actionAttrsReader->QueryStringAttribute(str.c_str(), &paramRead);
+            XMLCheckResult(eResult);
+            actionBeingBuilt->setParameter(str.c_str(), paramRead);
+        }
+
+        actionList->push_back(actionBeingBuilt);
+
+        actionReader = actionReader->NextSibling();
+    }
 
     return actionList;
 }

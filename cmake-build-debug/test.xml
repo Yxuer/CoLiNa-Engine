@@ -1,38 +1,9 @@
 <Game>
   <Area name="area1" text="Sample text" startingZone="true">
-    <Item name="item1" state="state1">
-      <State>
-        <Command>
-          <Action/>
-	  <Action/>
-        </Command>
-      </State>
-      <State>
-        <Command>
-          <Action/>
-	  <Action/>
-        </Command>
-        <Command>
-          <Action/>
-	  <Action/>
-        </Command>
-      </State>
-    </Item>
-    <Item name="item2" state="state2">
-      <State>
-        <Command>
-          <Action/>
-	  <Action/>
-        </Command>
-      </State>
-      <State>
-        <Command>
-          <Action/>
-	  <Action/>
-        </Command>
-        <Command>
-          <Action/>
-	  <Action/>
+    <Item name="switch" state="state1">
+      <State name="state1">
+        <Command name="touch">
+          <Action name="print" text="You have touched the switch"/>
         </Command>
       </State>
     </Item>

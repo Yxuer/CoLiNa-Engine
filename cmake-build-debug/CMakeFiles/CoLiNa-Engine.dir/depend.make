@@ -23,6 +23,9 @@ CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/GameMana
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/Item.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.cpp
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Action.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/EndGame.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/Print.h
+CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/actions/SetState.h
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/Action.cpp.o: ../src/game/util/TinyXML2/tinyxml2.h
 
 CMakeFiles/CoLiNa-Engine.dir/src/game/actions/EndGame.cpp.o: ../src/game/Area.h

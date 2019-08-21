@@ -11,7 +11,7 @@
 
 class SetState : public Action {
     public:
-        SetState(GameManager *mgr);
+        SetState();
         virtual void run() override ;
 };
 

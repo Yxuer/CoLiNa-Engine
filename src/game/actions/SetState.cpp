@@ -5,7 +5,7 @@
 #include "SetState.h"
 #include "../GameManager.h"
 
-SetState::SetState(GameManager *mgr) : Action(mgr){
+SetState::SetState() : Action(){
     listOfParameterNames.emplace_back("item");
     listOfParameterNames.emplace_back("state");
 }

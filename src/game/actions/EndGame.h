@@ -11,8 +11,8 @@
 
 class EndGame : public Action {
     public:
-        EndGame(GameManager *mgr);
-        virtual void run() override ;
+        EndGame();
+        virtual void run() override;
 };
 
 

@@ -9,7 +9,13 @@ Area::Area(std::map<std::string, Item*>* items, std::string n, std::string d, bo
     areaItems = items;
 }
 
-Area::~Area() {}
+Area::~Area() {
+    for (auto item : *areaItems) {
+        delete item.second;
+    }
+
+    delete areaItems;
+}
 
 Item* Area::getItem(const std::string& itemName) {
     return (*areaItems)[itemName];

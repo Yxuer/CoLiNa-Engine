@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <set>
 
 class GameManager;
 
@@ -16,13 +17,17 @@ class Action {
 protected:
     std::vector<std::string> listOfParameterNames;
     std::map<std::string, std::string> parameters;
-    GameManager *gameManager;
 
 public:
-    Action(GameManager *manager);
+    static GameManager *gameManager;
+    static std::set<std::string> listOfActions;
+
+    Action();
     virtual ~Action();
 
-    virtual void run();
+    virtual void run() = 0;
+    static Action* make_action(const std::string& actionName);     /// Action factory
+
     const std::vector<std::string>& getListOfParameterNames();
     void setParameter(const std::string& parameter, const std::string& value);
 };
