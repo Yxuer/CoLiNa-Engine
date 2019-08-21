@@ -4,7 +4,7 @@
 
 #include "Item.h"
 
-Item::Item(std::map<std::string, std::map<std::string, Action**>>* actsPState, std::string n, std::string st)
+Item::Item(std::map<std::string, std::map<std::string, std::vector<Action*>>>* actsPState, std::string n, std::string st)
 : name(n), state(st){
     actionsPerState = actsPState;
 }

@@ -28,6 +28,7 @@ private:
 
     std::map<std::string, Item*>* readAreaItems(tinyxml2::XMLNode* areaRef);
     std::map<std::string, std::map<std::string, Action**>>* readItemStates(tinyxml2::XMLNode* itemRef);
+    std::vector<Action*>* readCommandActions(tinyxml2::XMLNode* commandRef);
 
 public:
     GameManager();

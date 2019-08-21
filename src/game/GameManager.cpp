@@ -116,6 +116,7 @@ std::map<std::string, Item*>* GameManager::readAreaItems(tinyxml2::XMLNode *area
 }
 
 std::map<std::string, std::map<std::string, Action**>>* GameManager::readItemStates(tinyxml2::XMLNode *itemRef) {
+
     auto stateList = new std::map<std::string, std::map<std::string, Action**>>();
 
     tinyxml2::XMLNode *stateReader = itemRef->FirstChild();
@@ -162,6 +163,12 @@ std::map<std::string, std::map<std::string, Action**>>* GameManager::readItemSta
     }
 
     return stateList;
+}
+
+std::vector<Action*>* GameManager::readCommandActions(tinyxml2::XMLNode *commandRef) {
+    auto actionList = new std::vector<Action*>();
+
+    return actionList;
 }
 
 void GameManager::startGame() {
