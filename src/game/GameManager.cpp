@@ -15,6 +15,7 @@
 
 GameManager* GameManager::instance = 0;
 
+/*Implementation for the Singleton pattern: returns the unique GameManager instance*/
 GameManager* GameManager::getInstance() {
 
     if (instance == 0) {
@@ -25,17 +26,21 @@ GameManager* GameManager::getInstance() {
     return instance;
 }
 
+/*GameManager constructor*/
 GameManager::GameManager() {
     finishGame = false;
     location = "";
 }
 
+/*Deletes all areas, items, commands and actions of the game*/
 void GameManager::erase() {
     for (auto area : areaList) {
         delete area.second;
     }
 }
 
+/*Loads the XML game file into the proper game objects, given the filename of
+ * the file to load*/
 void GameManager::loadXML(const std::string &filename) {
 
     std::cout << "Loading game file " << filename << "\n";
@@ -82,6 +87,7 @@ void GameManager::loadXML(const std::string &filename) {
         eResult = areaAttrsReader->QueryBoolAttribute("startingZone", &startingArea);
         XMLCheckResult(eResult);
 
+        // Check if the starting area is unique
         if (startingArea) {
             if (!location.empty()) {
                 throw MultipleStartingAreasError();
@@ -98,6 +104,8 @@ void GameManager::loadXML(const std::string &filename) {
     }
 }
 
+/*Auxiliary function to read the items in a certain area from the XML file, given the
+ * reference to the current area being read (XML)*/
 std::map<std::string, Item*>* GameManager::readAreaItems(tinyxml2::XMLNode *areaRef) {
 
     auto itemList = new std::map<std::string, Item*>();
@@ -137,6 +145,8 @@ std::map<std::string, Item*>* GameManager::readAreaItems(tinyxml2::XMLNode *area
     return itemList;
 }
 
+/*Auxiliary function to read the commands of a certain item from the XML file, given the
+ * reference to the current item being read (XML)*/
 std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* GameManager::readItemStates(tinyxml2::XMLNode *itemRef) {
 
     auto stateList = new std::map<std::string, std::map<std::string, std::vector<Action*>*>*>();
@@ -195,6 +205,8 @@ std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* GameManage
     return stateList;
 }
 
+/*Auxiliary function to read the actions of a certain command from the XML file, given the
+ * reference to the current command being read (XML)*/
 std::vector<Action*>* GameManager::readCommandActions(tinyxml2::XMLNode *commandRef) {
     auto actionList = new std::vector<Action*>();
 
@@ -239,6 +251,7 @@ std::vector<Action*>* GameManager::readCommandActions(tinyxml2::XMLNode *command
     return actionList;
 }
 
+/*Game main loop*/
 void GameManager::startGame() {
 
     std::vector<std::string> *input = nullptr;
@@ -251,6 +264,7 @@ void GameManager::startGame() {
     }
 }
 
+/*Reads a command from the player and verifies its structure*/
 std::vector<std::string>* GameManager::getCommand() {
 
     std::vector<std::string> *input = nullptr;
@@ -279,6 +293,7 @@ std::vector<std::string>* GameManager::getCommand() {
     return input;
 }
 
+/*Auxiliary function to read user input and separate it by whitespaces*/
 std::vector<std::string>* GameManager::parseInput() {
     std::string input;
     std::vector<std::string> *splitInput = new std::vector<std::string>();
@@ -294,6 +309,7 @@ std::vector<std::string>* GameManager::parseInput() {
     return splitInput;
 }
 
+/*Runs the command given by the player*/
 void GameManager::runCommand(std::vector<std::string> *command) {
     // 1-word commands
     if (command->size() == 1) {
@@ -320,14 +336,17 @@ void GameManager::runCommand(std::vector<std::string> *command) {
     }
 }
 
+/*Sets the finishGame flag to the given boolean value*/
 void GameManager::setEndGame(bool end) {
     finishGame = end;
 }
 
-Area* GameManager::getArea(std::string name) {
+/*Returns the area whose name is the one given to the function*/
+Area* GameManager::getArea(const std::string &name) {
     return areaList[name];
 }
 
+/*Returns the current location of the player*/
 const std::string& GameManager::getCurrentLocation() {
     return location;
 }

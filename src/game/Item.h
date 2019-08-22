@@ -12,8 +12,14 @@
 
 class Item {
 private:
+
+    // Name of the item
     std::string name;
+
+    // Double map of the states an object can have, and their possible commands
     std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* actionsPerState;
+
+    // Current state of the object
     std::string state;
 
 public:

@@ -5,13 +5,13 @@
 #include "Item.h"
 #include "util/GameExceptions.h"
 
-#include <iostream>
-
+/*Item constructor.*/
 Item::Item(std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* actsPState, std::string n, std::string st)
 : name(n), state(st){
     actionsPerState = actsPState;
 }
 
+/*Item destructor. Destroys all its associated actions */
 Item::~Item() {
     for (auto state : *actionsPerState) {
         for (auto command : *(state.second)) {
@@ -25,14 +25,18 @@ Item::~Item() {
     delete actionsPerState;
 }
 
+/*Returns the current state of the item*/
 const std::string& Item::getState() const {
     return state;
 }
 
+/*Sets the state of the item to the given value*/
 void Item::setState(const std::string &stateName) {
     state = stateName;
 }
 
+/*Runs a given command on this item. It also checks if the item is in an invalid state,
+ * or if the action does not exist in this state*/
 void Item::act(const std::string &action) {
     auto stateCommands = actionsPerState->find(state);
     if (stateCommands == actionsPerState->end()) {

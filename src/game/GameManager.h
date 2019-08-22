@@ -15,9 +15,16 @@
 class GameManager {
 
 private:
+    // Map of areas in the game, mapped by area name
     std::map<std::string, Area*> areaList;
+
+    // Inventory the player has
     std::map<std::string, unsigned int> playerInventory;
+
+    // Current location of the player
     std::string location;
+
+    // Flag to indicate if the game has finished
     bool finishGame;
 
     // Singleton implementation
@@ -45,7 +52,7 @@ public:
     void removeFromInventory(const std::string& itemToDelete);
     bool checkInventory(const std::string& itemToCheck);
 
-    Area* getArea(std::string name);
+    Area* getArea(const std::string &name);
     void setEndGame(bool end);
 
     const std::string& getCurrentLocation();

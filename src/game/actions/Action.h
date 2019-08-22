@@ -15,11 +15,19 @@ class GameManager;
 class Action {
 
 protected:
+
+    // List of parameter names for the specific action
     std::vector<std::string> listOfParameterNames;
+
+    // List of parameter values (as strings)
     std::map<std::string, std::string> parameters;
 
 public:
+
+    // Reference to the GameManager object
     static GameManager *gameManager;
+
+    // List of all possible actions
     static std::set<std::string> listOfActions;
 
     Action();

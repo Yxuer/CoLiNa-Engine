@@ -16,6 +16,7 @@ Action::Action(){}
 
 Action::~Action() {}
 
+/*Action subclass factory method*/
 Action* Action::make_action(const std::string &actionName) {
     if (std::string(actionName) == "setState") {
         return new SetState();
@@ -28,10 +29,12 @@ Action* Action::make_action(const std::string &actionName) {
     }
 }
 
+/*Returns the list of parameter names for this specific action*/
 const std::vector<std::string>& Action::getListOfParameterNames() {
     return listOfParameterNames;
 }
 
+/*Sets the value of a certain parameter in this specific action*/
 void Action::setParameter(const std::string &parameter, const std::string &value) {
     parameters[parameter] = value;
 }

@@ -6,11 +6,13 @@
 
 #include <iostream>
 
+/*Area constructor*/
 Area::Area(std::map<std::string, Item*>* items, std::string n, std::string d, bool start)
 : name(n), description(d), isStarting(start) {
     areaItems = items;
 }
 
+/*Area destructor. Deletes all its items*/
 Area::~Area() {
     for (auto item : *areaItems) {
         delete item.second;
@@ -19,10 +21,12 @@ Area::~Area() {
     delete areaItems;
 }
 
+/*Returns an item on this area, given its name*/
 Item* Area::getItem(const std::string& itemName) {
     return (*areaItems)[itemName];
 }
 
+/*Prints the description of the current area*/
 void Area::examine() {
     std::cout << description;
 }
