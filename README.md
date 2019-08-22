@@ -73,5 +73,4 @@ The engine is still in a very early state. Because of this, there is still a lot
 * The current action set is very limited, and there are various actions that can be added to the engine. For example, player inventory actions, variable manipulation actions, etc.
 * There is a special kind of action to be added to the game, the *trigger*. The trigger checks if a list of conditions is true and, in that case, runs a certain set of actions. If the list is false, it runs another set of actions.
 * In addition to triggers, *conditions* must also be implemented.
-* The initial interface is currently unexistant. It doesn't even ask for a file name to execute. This has to be fixed ASAP.
 * Some minor improvements must also be made (like duplicated-name checking).
