@@ -2,7 +2,7 @@
 
 The CoLiNa-Engine (COmmand LIne NArration Engine) is a WIP small engine for creating and playing command-line games defined in a simple but powerful XML-based syntax.
 
-This engine is still in a very early state (for now, only files named "test.xml" can be played), but it should be enough to give a glimpse of its capabilities. Future work is indicated in the section [Future work](#future-work)
+This engine is still in a very early state, but it should be enough to give a glimpse of its capabilities. Future work is indicated in the section [Future work](#future-work)
 
 ## How to compile and run the engine
 
