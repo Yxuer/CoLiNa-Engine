@@ -63,7 +63,7 @@ As it has been said before, the actions are one of the most crucial elements in 
 
 ## Expanding the action set and modifying the engine
 
-(WIP) For more information on how to add new actions to the game and how to modify the engine, please visit the Wiki.
+For more information on how to add new actions to the game and how to modify the engine, please visit the [Wiki](https://github.com/Yxuer/CoLiNa-Engine/wiki).
 
 ## Future work
 
