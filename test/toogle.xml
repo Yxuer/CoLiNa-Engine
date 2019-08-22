@@ -1,0 +1,18 @@
+<Game>
+  <Area name="area1" text="Sample text" startingZone="true">
+    <Item name="switch" state="off">
+      <State name="off">
+        <Command name="touch">
+          <Action name="print" text="You have touched the switch. The switch is now ON"/>
+	  <Action name="setState" item="switch" state="on"/>
+        </Command>
+      </State>
+      <State name="on">
+        <Command name="touch">
+          <Action name="print" text="You have touched the switch. The switch is now OFF"/>
+	  <Action name="setState" item="switch" state="off"/>
+        </Command>
+      </State>
+    </Item>
+  </Area>
+</Game>
