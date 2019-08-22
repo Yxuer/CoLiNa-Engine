@@ -55,7 +55,7 @@ As it has been said before, the actions are one of the most crucial elements in 
 * `print`: this action prints a given text to the command-line terminal. It has one parameter:
   * `text`: the text to be printed
 
-* `setState`: this action changes the state of a given item to a certain given state. It has two parameters:
+* `setState`: this action changes the state of a given item **in the current area** to a certain given state. It has two parameters:
   * `item`: the item which state is going to be changed.
   * `state`: the new state to give to the item.
   
