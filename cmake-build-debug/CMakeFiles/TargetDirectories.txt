@@ -1,3 +1,0 @@
-/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/CoLiNa-Engine.dir
-/home/usuario/Personal/CoLiNa-Engine/cmake-build-debug/CMakeFiles/edit_cache.dir
