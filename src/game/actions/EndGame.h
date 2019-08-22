@@ -7,8 +7,6 @@
 
 #include "Action.h"
 
-#include <string>
-
 class EndGame : public Action {
     public:
         EndGame();

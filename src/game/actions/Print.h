@@ -7,8 +7,6 @@
 
 #include "Action.h"
 
-#include <string>
-
 class Print : public Action {
     public:
         Print();
