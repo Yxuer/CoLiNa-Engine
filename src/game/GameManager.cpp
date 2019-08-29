@@ -95,6 +95,11 @@ void GameManager::loadXML(const std::string &filename) {
             location = areaName;
         }
 
+        // Check if the area name is duplicated
+        if (areaList.find(areaName) != areaList.end()) {
+            throw DuplicatedElementError("Area", areaName);
+        }
+
         itemList = readAreaItems(areaReader);
 
         areaBeingBuilt = new Area(itemList, areaName, areaDescription, startingArea);
@@ -134,6 +139,11 @@ std::map<std::string, Item*>* GameManager::readAreaItems(tinyxml2::XMLNode *area
         eResult = itemAttrsReader->QueryStringAttribute("state", &state);
         XMLCheckResult(eResult);
 
+        // Check if the item name is duplicated
+        if (itemList->find(name) != itemList->end()) {
+            throw DuplicatedElementError("Item", name);
+        }
+
         actionsPerState = readItemStates(itemReader);
 
         itemBeingBuilt = new Item(actionsPerState, name, state);
@@ -171,6 +181,11 @@ std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* GameManage
         eResult = stateAttrsReader->QueryStringAttribute("name", &stateName);
         XMLCheckResult(eResult);
 
+        // Check if the state name is duplicated
+        if (stateList->find(stateName) != stateList->end()) {
+            throw DuplicatedElementError("State", stateName);
+        }
+
         commandActions = new std::map<std::string, std::vector<Action*>*>();
         tinyxml2::XMLNode *commandReader = stateReader->FirstChild();
         if (commandReader == nullptr) {
@@ -189,6 +204,11 @@ std::map<std::string, std::map<std::string, std::vector<Action*>*>*>* GameManage
 
             eResult = commandAttrsReader->QueryStringAttribute("name", &commandName);
             XMLCheckResult(eResult);
+
+            // Check if the state name is duplicated
+            if (commandActions->find(commandName) != commandActions->end()) {
+                throw DuplicatedElementError("Command", commandName);
+            }
 
             actionListPerState = readCommandActions(commandReader);
 
@@ -343,10 +363,22 @@ void GameManager::setEndGame(bool end) {
 
 /*Returns the area whose name is the one given to the function*/
 Area* GameManager::getArea(const std::string &name) {
+    if (areaList.find(name) == areaList.end()) {
+        return nullptr;
+    }
     return areaList[name];
 }
 
 /*Returns the current location of the player*/
 const std::string& GameManager::getCurrentLocation() {
     return location;
+}
+
+/*Sets the current location of the player*/
+void GameManager::setCurrentLocation(const std::string &newLoc) {
+    location = newLoc;
+
+    if (areaList.find(location) == areaList.end()) {
+        throw UnknownLocationError();
+    }
 }

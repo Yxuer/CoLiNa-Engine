@@ -8,9 +8,10 @@
 #include "EndGame.h"
 #include "SetState.h"
 #include "Print.h"
+#include "ChangeArea.h"
 
 GameManager* Action::gameManager = nullptr;
-std::set<std::string> Action::listOfActions = {"setState", "print", "endGame"};
+std::set<std::string> Action::listOfActions = {"setState", "print", "endGame", "changeArea"};
 
 Action::Action(){}
 
@@ -26,6 +27,9 @@ Action* Action::make_action(const std::string &actionName) {
     }
     else if (std::string(actionName) == "print") {
         return new Print();
+    }
+    else if (std::string(actionName) == "changeArea") {
+        return new ChangeArea();
     }
 }
 

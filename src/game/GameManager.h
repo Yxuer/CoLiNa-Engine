@@ -56,6 +56,7 @@ public:
     void setEndGame(bool end);
 
     const std::string& getCurrentLocation();
+    void setCurrentLocation(const std::string& newLoc);
 };
 
 #endif //UNTITLED_GAMEMANAGER_H

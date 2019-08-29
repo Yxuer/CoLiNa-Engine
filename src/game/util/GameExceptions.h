@@ -128,5 +128,25 @@ class MultipleStartingAreasError : public FatalException {
         }
 };
 
+class DuplicatedElementError : public FatalException {
+    private:
+        std::string elemType;
+        std::string elemName;
+
+    public:
+        DuplicatedElementError(std::string type, std::string name) {
+            elemType = type;
+            elemName = name;
+        }
+
+        virtual const char* what() const throw() {
+            std::string error;
+            error = "Error: element of type " + elemType +
+                    "has a duplicated element of name " + elemName;
+
+            return error.c_str();
+        }
+};
+
 #endif //COLINA_ENGINE_GAMEEXCEPTIONS_H
 

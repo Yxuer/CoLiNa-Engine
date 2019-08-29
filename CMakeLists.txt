@@ -18,4 +18,4 @@ add_executable(CoLiNa-Engine src/main.cpp
                                 src/game/GameManager.cpp
                                 src/game/Area.cpp
                                 src/game/Item.cpp
-        src/game/actions/SetState.cpp src/game/actions/SetState.h src/game/actions/Print.cpp src/game/actions/Print.h src/game/actions/EndGame.cpp src/game/actions/EndGame.h)
+        src/game/actions/SetState.cpp src/game/actions/SetState.h src/game/actions/Print.cpp src/game/actions/Print.h src/game/actions/EndGame.cpp src/game/actions/EndGame.h src/game/actions/ChangeArea.cpp src/game/actions/ChangeArea.h)
