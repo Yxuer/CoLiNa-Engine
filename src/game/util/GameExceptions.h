@@ -148,5 +148,12 @@ class DuplicatedElementError : public FatalException {
         }
 };
 
+class UnknownItemError : public  FatalException {
+    public:
+        virtual const char* what() const throw() {
+            return "Error: trying to access an unexistant item";
+        }
+};
+
 #endif //COLINA_ENGINE_GAMEEXCEPTIONS_H
 

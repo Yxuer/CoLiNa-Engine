@@ -333,7 +333,17 @@ std::vector<std::string>* GameManager::parseInput() {
 void GameManager::runCommand(std::vector<std::string> *command) {
     // 1-word commands
     if (command->size() == 1) {
-        std::cout << "Running a 1-word command.\n";
+        try {
+            auto currentArea = areaList.find(location);
+
+            if (currentArea == areaList.end()) {
+                throw UnknownLocationError();
+            }
+
+            currentArea->second->examine();
+        } catch (const LesserException& e) {
+            std::cout << e.what();
+        }
     }
 
     else if (command->size() == 2) {

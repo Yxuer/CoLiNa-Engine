@@ -23,6 +23,9 @@ Area::~Area() {
 
 /*Returns an item on this area, given its name*/
 Item* Area::getItem(const std::string& itemName) {
+    if (areaItems->find(itemName) == areaItems->end()) {
+        return nullptr;
+    }
     return (*areaItems)[itemName];
 }
 

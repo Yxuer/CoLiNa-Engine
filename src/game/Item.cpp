@@ -33,6 +33,10 @@ const std::string& Item::getState() const {
 /*Sets the state of the item to the given value*/
 void Item::setState(const std::string &stateName) {
     state = stateName;
+
+    if (actionsPerState->find(stateName) == actionsPerState->end()) {
+        throw UnknownStateError();
+    }
 }
 
 /*Runs a given command on this item. It also checks if the item is in an invalid state,

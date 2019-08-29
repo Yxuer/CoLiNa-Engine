@@ -4,6 +4,7 @@
 
 #include "SetState.h"
 #include "../GameManager.h"
+#include "../util/GameExceptions.h"
 
 SetState::SetState() : Action(){
     listOfParameterNames.emplace_back("item");
@@ -11,7 +12,12 @@ SetState::SetState() : Action(){
 }
 
 void SetState::run() {
-    gameManager->getArea(gameManager->getCurrentLocation())
-               ->getItem(parameters["item"])
-               ->setState(parameters["state"]);
+    Item *itemToSet = gameManager->getArea(gameManager->getCurrentLocation())
+                                 ->getItem(parameters["item"]);
+
+    if (itemToSet == nullptr) {
+        throw UnknownItemError();
+    }
+
+    itemToSet->setState(parameters["state"]);
 }
