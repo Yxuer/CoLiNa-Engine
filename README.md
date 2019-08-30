@@ -39,6 +39,15 @@ The following file is a simple example of a game file, which is written in an XM
     </Item>
   </Area>
 </Game>
+
+<OneWordCommands>
+  <Command name="examine">
+    <Action name="examine"/>
+  </Command>
+  <Command name="exit">
+    <Action name="endGame"/>
+  </Command>
+</OneWordCommands>
 ```
 As it can be seen, this file conforms to the game structure explained in [Game structure](#game-structure-and-behavior). In addition to this structure, the XML file specifies additional information for each element:
 
@@ -47,6 +56,8 @@ As it can be seen, this file conforms to the game structure explained in [Game s
 * **State**: the file specifies, for each state, its *name* (with the attribute `name`).
 * **Command**: the file specifies, for each command, its *invocation name* (with the attribute `name`).
 * **Action**: the file specifies, for each action, its *action name* (with the attribute `name`), and a list of action-specific parameters. The current set of actions is further explained on Section [Current action set](#current-action-set)
+
+Apart from these elements, there is an special, optional part of the XML file, the `OneWordCommands` section. Here, simple commands consisting in one word (without specifying any item) can be written: for example, for examining the current room. Given that actions have no information regarding their associated items, in theory, any possible kind of action could be included in these commands.
 
 ## Current action set
 
@@ -59,7 +70,12 @@ As it has been said before, the actions are one of the most crucial elements in 
   * `item`: the item which state is going to be changed.
   * `state`: the new state to give to the item.
   
-* `endGame`: this action tells the game engine to finish the game. It has no parameters
+* `endGame`: this action tells the game engine to finish the game. It has no parameters.
+
+* `changeArea`: this action changes the current area of the player. The engine will throw an error if **the area to where the player is moved does not exist**. It has one parameter:
+  * `areaNane`: the name of the area to where the player is moved.
+  
+* `examine`: this action prints the description of the current area. It has no parameters.
 
 ## Expanding the action set and modifying the engine
 
