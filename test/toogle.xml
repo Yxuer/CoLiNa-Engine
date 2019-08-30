@@ -16,3 +16,12 @@
     </Item>
   </Area>
 </Game>
+
+<OneWordCommands>
+  <Command name="examine">
+    <Action name="examine"/>
+  </Command>
+  <Command name="exit">
+    <Action name="endGame"/>
+  </Command>
+</OneWordCommands>

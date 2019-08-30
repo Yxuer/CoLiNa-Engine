@@ -33,7 +33,7 @@ class UnknownItemException : public LesserException {
 class UnknownActionException : public LesserException {
     public:
         virtual const char* what() const throw() {
-            return "I cannot do this on this item";
+            return "I cannot perform this command";
         }
 };
 
@@ -81,7 +81,7 @@ class InvalidCommandError : public FatalException {
     public:
         virtual const char* what() const throw() {
             return "Error: Invalid file: only Command elements can be children of"
-                   "State elements";
+                   "State elements or of the one-word-command list";
         }
 };
 

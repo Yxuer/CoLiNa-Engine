@@ -27,6 +27,9 @@ private:
     // Flag to indicate if the game has finished
     bool finishGame;
 
+    // List of 1-word commands
+    std::map<std::string, std::vector<Action*>*> oneWordCommandList;
+
     // Singleton implementation
     static GameManager *instance;
     GameManager();

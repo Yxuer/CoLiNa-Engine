@@ -37,6 +37,13 @@ void GameManager::erase() {
     for (auto area : areaList) {
         delete area.second;
     }
+
+    for (auto command : oneWordCommandList) {
+        for (auto action : *command.second) {
+            delete action;
+        }
+        delete command.second;
+    }
 }
 
 /*Loads the XML game file into the proper game objects, given the filename of
@@ -106,6 +113,43 @@ void GameManager::loadXML(const std::string &filename) {
         areaList.insert(std::make_pair(std::string(areaName), areaBeingBuilt));
 
         areaReader = areaReader->NextSibling();
+    }
+
+    // Read one-word commands
+    root = root->NextSibling();
+    if (root == nullptr || std::string(root->Value()) != "OneWordCommands") {
+        // This section is not compulsory for the XML, so return normally
+        return;
+    }
+
+    tinyxml2::XMLNode *oneWordCommandReader = root->FirstChild();
+    if (oneWordCommandReader == nullptr) {
+        throw InvalidCommandError();
+    }
+
+    while(oneWordCommandReader != nullptr) {
+        if (std::string(oneWordCommandReader->Value()) != "Command") {
+            throw InvalidCommandError();
+        }
+        std::cout << "Reading one-word command\n";
+
+        const char * commandName;
+        std::vector<Action*>* actionList;
+        auto commandAttrsReader = dynamic_cast<tinyxml2::XMLElement*>(oneWordCommandReader);
+
+        eResult = commandAttrsReader->QueryStringAttribute("name", &commandName);
+        XMLCheckResult(eResult);
+
+        // Check if the command name is duplicated
+        if (oneWordCommandList.find(commandName) != oneWordCommandList.end()) {
+            throw DuplicatedElementError("Command", commandName);
+        }
+
+        actionList = readCommandActions(oneWordCommandReader);
+
+        oneWordCommandList.insert(std::make_pair(commandName, actionList));
+
+        oneWordCommandReader = oneWordCommandReader->NextSibling();
     }
 }
 
@@ -301,7 +345,6 @@ std::vector<std::string>* GameManager::getCommand() {
             input = parseInput();
 
             if (input->size() > 2) { throw TooManyWordsException();}
-            if (input->size() == 1 && input->front().compare("examine")) { throw InvalidExamineException();}
 
             repeatParsing = false;
 
@@ -334,13 +377,16 @@ void GameManager::runCommand(std::vector<std::string> *command) {
     // 1-word commands
     if (command->size() == 1) {
         try {
-            auto currentArea = areaList.find(location);
+            auto commandToRun = command->at(0);
 
-            if (currentArea == areaList.end()) {
-                throw UnknownLocationError();
+            if (oneWordCommandList.find(commandToRun) == oneWordCommandList.end()) {
+                throw UnknownActionException();
             }
 
-            currentArea->second->examine();
+            for (auto runAction : *oneWordCommandList.find(commandToRun)->second) {
+                runAction->run();
+            }
+
         } catch (const LesserException& e) {
             std::cout << e.what();
         }
